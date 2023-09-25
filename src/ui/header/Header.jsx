@@ -43,7 +43,10 @@ const Header = () => {
                 d="M10.417 5.868a2.5 2.5 0 102.049 2.049M4.167 12.68c-.54-1.378-.834-2.845-.834-4.227 0-3.748 2.985-6.786 6.667-6.786s6.667 3.038 6.667 6.786c0 3.718-2.128 8.057-5.448 9.61a2.875 2.875 0 01-2.438 0c-1.06-.496-1.999-1.276-2.786-2.23"
               ></path>
             </svg>
+            <a className='links' href='https://www.google.com/maps/place/Heinrich-Pesch-Stra%C3%9Fe+5a,+50739+K%C3%B6ln,+Alemania/@50.9761526,6.92362,18z/data=!3m1!4b1!4m6!3m5!1s0x47bf2ff516b34efb:0x89a570688681b4ce!8m2!3d50.9761509!4d6.9249075!16s%2Fg%2F11g9qpv7lw?entry=ttu'
+             target='blank'>
             <Typography sx={{ textDecoration: "underline" }} fontSize={"12px"}>Heinrich-Pesch-Str. <br /> 5a 50739 Köln</Typography>
+            </a>
           </Box>
           <Box>
             <Typography fontSize={"12px"}>Mon-Fri, 9:00-19:00</Typography>
