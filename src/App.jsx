@@ -2,6 +2,8 @@ import { Typography } from '@mui/material'
 import './App.css'
 import Layout from './layout/Layout'
 import Main from './pages/Main'
+import { Route, Routes } from 'react-router-dom'
+import About from './pages/About'
 
 function App() {
 
@@ -9,8 +11,10 @@ function App() {
   return (
     <>
       <Layout>
-        <Main/>
-        
+        <Routes>
+          <Route path='/' element={<Main />} />
+          <Route path='/about' element={<About />} />
+        </Routes>
       </Layout>
     </>
   )

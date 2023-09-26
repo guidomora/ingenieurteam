@@ -1,6 +1,8 @@
 import React from 'react'
 import logo from '../../imgs/ST.png'
 import { Box, Button, Grid, Typography } from '@mui/material'
+import { Link, NavLink } from 'react-router-dom'
+import { Link as UiLink } from '@mui/material'
 
 const Header = () => {
   return (
@@ -11,7 +13,7 @@ const Header = () => {
           <Box display={'flex'} alignItems={'center'}>
             <img className='img' src={logo} alt="" />
             <svg
-                // ingenieur team
+              // ingenieur team
               xmlns="http://www.w3.org/2000/svg"
               width="162"
               height="16"
@@ -45,8 +47,8 @@ const Header = () => {
               ></path>
             </svg>
             <a className='links' href='https://www.google.com/maps/place/Heinrich-Pesch-Stra%C3%9Fe+5a,+50739+K%C3%B6ln,+Alemania/@50.9761526,6.92362,18z/data=!3m1!4b1!4m6!3m5!1s0x47bf2ff516b34efb:0x89a570688681b4ce!8m2!3d50.9761509!4d6.9249075!16s%2Fg%2F11g9qpv7lw?entry=ttu'
-             target='blank'>
-            <Typography sx={{ textDecoration: "underline" }} fontSize={"12px"}>Heinrich-Pesch-Str. <br /> 5a 50739 Köln</Typography>
+              target='blank'>
+              <Typography sx={{ textDecoration: "underline" }} fontSize={"12px"}>Heinrich-Pesch-Str. <br /> 5a 50739 Köln</Typography>
             </a>
           </Box>
           <Box>
@@ -124,16 +126,18 @@ const Header = () => {
         </Box>
       </Grid>
       <Grid pl={15} pr={15} pt={3} pb={3} bgcolor={"secondary.main"} display={'flex'} justifyContent={"space-between"}>
-        <Box display={'flex'} justifyContent={'space-between'} alignItems={'center'} width={370}>
-          <Typography fontWeight={600} fontSize={14}>Homepage</Typography>
-          <Typography fontWeight={600} fontSize={14}>Services</Typography>
-          <Typography fontWeight={600} fontSize={14}>Locations</Typography>
-          <Typography fontWeight={600} fontSize={14}>Contacts</Typography>
+        <Box display={'flex'} justifyContent={'space-evenly'} alignItems={'center'} width={370}>
+          <NavLink to={'/'} className={({ isActive }) => `nav-item nav-link ${isActive ? "onactive" : 'links'}`}>
+            <Typography className='hvr-underline-from-center' fontWeight={600} fontSize={14}>Homepage</Typography>
+          </NavLink>
+          <NavLink to={'/about'} className={({ isActive }) => `nav-item nav-link ${isActive ? "onactive" : 'links'}`}>
+            <Typography className='hvr-underline-from-center' fontWeight={600} fontSize={14}>About</Typography>
+          </NavLink>
         </Box>
         <Box display={'flex'} justifyContent={'space-between'} alignItems={'center'} width={430}>
           <Typography color={"primary.main"} fontWeight={600} fontSize={14}>+49 221 57 000 807</Typography>
-          <Button variant="outlined" sx={{textTransform:"none", borderRadius:4, fontSize:12}} >Call Back</Button>
-          <Button variant="contained" sx={{textTransform:"none", borderRadius:4, fontSize:12}}>Book an Appointment</Button>
+          <Button variant="outlined" sx={{ textTransform: "none", borderRadius: 4, fontSize: 12 }} >Call Back</Button>
+          <Button variant="contained" sx={{ textTransform: "none", borderRadius: 4, fontSize: 12 }}>Book an Appointment</Button>
         </Box>
       </Grid>
     </>
