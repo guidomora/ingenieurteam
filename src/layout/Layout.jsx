@@ -6,14 +6,12 @@ const Layout = ({ children }) => {
     return (
         <>
             <title>Ingenieur Team</title>
-
             <header>
                 <Header />
             </header>
             <main>
                 {children}
             </main>
-
             <footer >
                 <Footer/>
             </footer>
