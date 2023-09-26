@@ -10,7 +10,8 @@ const Header = () => {
         <Box display={'flex'} justifyContent={'space-between'} alignItems={'center'} width={370}>
           <Box display={'flex'} alignItems={'center'}>
             <img className='img' src={logo} alt="" />
-            <svg      // ingenieur team
+            <svg
+                // ingenieur team
               xmlns="http://www.w3.org/2000/svg"
               width="162"
               height="16"

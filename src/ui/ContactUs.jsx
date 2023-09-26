@@ -1,8 +1,12 @@
-import { Box, Button, CardMedia, Grid, TextField, Typography } from '@mui/material'
-import React from 'react'
+import { Box, Button, CardMedia, Grid, InputLabel, Link, MenuItem, Select, TextField, Typography } from '@mui/material'
+import React, { useState } from 'react'
 import maps from '../imgs/Map.png'
 
 const ContactUs = () => {
+    const [services, setServices] = useState('')
+    const handleChange = (event) => {
+        setServices(event.target.value)
+    }
     return (
         <Grid>
             <Box pt={5} pb={5} textAlign={'center'}>
@@ -20,7 +24,17 @@ const ContactUs = () => {
                 </Box>
                 <Box pt={3}>
                     <Typography pb={1} color={'black'}>Choose service</Typography>
-                    <TextField className='border' sx={{ backgroundColor: 'secondary.main', width: 500 }} label='Choose service' />
+                    <Select
+                        sx={{ width: 500, pb:1 }}
+                        labelId="demo-simple-select-label"
+                        id="demo-simple-select"
+                        onChange={handleChange}
+                        value={'services'}
+                    >
+                        <MenuItem value={'Inspections'}>Inspections</MenuItem>
+                        <MenuItem value={'Test'}>Test</MenuItem>
+                        <MenuItem value={'Emissions'}>Emissions</MenuItem>
+                    </Select>
                 </Box>
                 <Box display={'flex'} justifyContent={'center'} pt={3}>
                     <Button variant='contained' fullWidth sx={{ height: 50, textTransform: 'none', borderRadius: 2 }}>
@@ -35,7 +49,7 @@ const ContactUs = () => {
                 </Box>
             </Box>
             <Box pt={10} pb={5} display={'flex'} justifyContent={'center'}>
-                <a href='https://www.google.com/maps/place/Heinrich-Pesch-Stra%C3%9Fe+5a,+50739+K%C3%B6ln,+Alemania/@50.9761526,6.92362,18z/data=!3m1!4b1!4m6!3m5!1s0x47bf2ff516b34efb:0x89a570688681b4ce!8m2!3d50.9761509!4d6.9249075!16s%2Fg%2F11g9qpv7lw?entry=ttu'>
+                <Link target='_blank' href='https://www.google.com/maps/place/Heinrich-Pesch-Stra%C3%9Fe+5a,+50739+K%C3%B6ln,+Alemania/@50.9761526,6.92362,18z/data=!3m1!4b1!4m6!3m5!1s0x47bf2ff516b34efb:0x89a570688681b4ce!8m2!3d50.9761509!4d6.9249075!16s%2Fg%2F11g9qpv7lw?entry=ttu'>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="175"
@@ -83,10 +97,10 @@ const ContactUs = () => {
                             d="M131.523 30.82V17.174h1.762l4.739 8.311h.072l4.739-8.31h1.762V30.82h-1.762l.072-10.383h-.072l-4.262 7.477h-1.024l-4.263-7.477h-.071c.13 3.453.071 6.93.071 10.383h-1.763zm18.575.238c-1 0-1.81-.286-2.477-.858-.667-.571-1-1.333-1-2.262 0-1.024.405-1.81 1.191-2.382.786-.571 1.762-.857 2.905-.857 1.024 0 1.881.19 2.524.571-.017-1.98-1.386-2.524-2.453-2.524-1.007.048-1.881.47-2.238 1.358l-1.596-.691c.215-.548.643-1.072 1.286-1.548s1.477-.714 2.525-.714c1.19 0 2.19.357 2.976 1.047.786.691 1.191 1.691 1.191 2.953v5.644h-1.667V29.51c-.779.977-1.831 1.527-3.167 1.548zm3.143-4.334c-1.026-.782-3.167-.88-4.167-.072-.786.762-.869 1.784-.048 2.381 1.986 1.274 4.287-.71 4.215-2.31zm8.525 4.334c-.714 0-1.357-.143-1.905-.453-.547-.31-.976-.69-1.262-1.143h-.095l.071 1.286v4.12h-1.738V21.413h1.667V22.7h.071c.286-.452.691-.833 1.263-1.143.571-.31 1.214-.452 1.905-.452 1.214 0 2.238.476 3.119 1.428.881.953 1.309 2.144 1.309 3.549 0 1.405-.428 2.595-1.309 3.548-.857.952-1.905 1.429-3.096 1.429zm-.285-1.62c.809 0 1.5-.31 2.095-.928.596-.62.881-1.43.881-2.453 0-1.024-.285-1.834-.881-2.453-.595-.62-1.286-.929-2.095-.929-.834 0-1.524.31-2.096.905-.571.62-.857 1.429-.857 2.453 0 1.024.286 1.857.857 2.453.572.667 1.262.952 2.096.952zm9.811 1.62c-1.048 0-1.905-.262-2.572-.762-.691-.5-1.167-1.143-1.5-1.905l1.571-.643c.501 1.166 1.334 1.762 2.525 1.762.547 0 1-.119 1.333-.357.357-.239.524-.548.524-.953 0-.62-.428-1.024-1.286-1.238l-1.881-.453c-.595-.143-1.167-.452-1.691-.857-.524-.405-.809-1-.809-1.715 0-.833.357-1.5 1.095-2 .738-.524 1.595-.762 2.596-.762.833 0 1.571.19 2.214.572.643.38 1.12.904 1.381 1.619l-1.524.619c-.333-.834-1.047-1.238-2.143-1.238-.524 0-.952.118-1.309.333-.357.215-.524.5-.524.881 0 .524.405.905 1.238 1.096l1.858.428c.881.215 1.524.548 1.953 1.048.428.5.619 1.048.619 1.667 0 .834-.334 1.548-1.024 2.096-.667.476-1.548.762-2.644.762z"
                         ></path>
                     </svg>
-                </a>
+                </Link>
             </Box>
             <Box>
-                <CardMedia src={maps} component='img' height={200}/>
+                <CardMedia src={maps} component='img' height={200} />
             </Box>
         </Grid>
     )

@@ -84,7 +84,7 @@ const Car = () => {
                 </svg>
             </Box>
             <Box>
-                <img src={audi} alt="" />
+                <img className='car' src={audi} alt="" />
             </Box>
         </Grid>
     )
