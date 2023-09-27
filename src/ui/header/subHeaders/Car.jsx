@@ -4,9 +4,11 @@ import audi from "../../../imgs/audi.png"
 
 const Car = () => {
     return (
-        <Grid bgcolor={"secondary.main"} pb={8} pt={8} display={'flex'} justifyContent={"space-between"}>
-            <Box pl={15} display={'flex'} flexDirection={"column"} justifyContent={"space-between"} height={350}>
+        <Grid bgcolor={"secondary.main"}
+        sx={{pb:{xs:3, md:8}, pt:{xs:0, md:8}, alignItems:{xs:'center', md:'none'}, justifyContent:"space-between"}} display={'flex'}>
+            <Box sx={{pl:{xs:3, md:15}}} display={'flex'} flexDirection={"column"} justifyContent={"space-between"} height={350}>
                 <svg
+                    className='engineer'
                     xmlns="http://www.w3.org/2000/svg"
                     width="541"
                     height="165"
