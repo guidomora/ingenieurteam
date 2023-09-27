@@ -133,6 +133,9 @@ const Header = () => {
           <NavLink to={'/about'} className={({ isActive }) => `nav-item nav-link ${isActive ? "onactive" : 'links'}`}>
             <Typography className='hvr-underline-from-center' fontWeight={600} fontSize={14}>About</Typography>
           </NavLink>
+          <NavLink to={'/services'} className={({ isActive }) => `nav-item nav-link ${isActive ? "onactive" : 'links'}`}>
+            <Typography className='hvr-underline-from-center' fontWeight={600} fontSize={14}>Services</Typography>
+          </NavLink>
         </Box>
         <Box display={'flex'} justifyContent={'space-between'} alignItems={'center'} width={430}>
           <Typography color={"primary.main"} fontWeight={600} fontSize={14}>+49 221 57 000 807</Typography>

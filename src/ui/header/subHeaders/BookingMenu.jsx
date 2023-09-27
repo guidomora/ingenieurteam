@@ -75,7 +75,6 @@ const BookingMenu = () => {
                     <Button variant="contained" sx={{ width: 200, textTransform: "none", borderRadius: 4, fontSize: 12 }}>Book an Appointment</Button>
                 </Box>
             </Box>
-
         </Grid>
     )
 }
