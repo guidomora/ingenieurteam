@@ -8,8 +8,8 @@ const Header = () => {
   return (
     <>
 
-      <Grid display={'flex'} justifyContent={'space-between'} alignItems={'center'} pl={15} pr={15} pt={3} pb={3} bgcolor={"secondary.main"}>
-        <Box display={'flex'} justifyContent={'space-between'} alignItems={'center'} width={370}>
+      <Grid display={'flex'} justifyContent={'space-between'} alignItems={'center'} sx={{pl:{xs:3, md:15}, pr:{xs:3, md:15}, flexDirection:{xs:'column', md:'row'}}}  pt={3} pb={3} bgcolor={"secondary.main"}>
+        <Box display={'flex'} sx={{flexDirection:{xs: 'column', md:'row'}, width:{xs:200, md:370}}} justifyContent={'space-between'} alignItems={'center'} >
           <Box display={'flex'} alignItems={'center'}>
             <img className='img' src={logo} alt="" />
             <svg
@@ -27,10 +27,9 @@ const Header = () => {
             </svg>
           </Box>
           <Typography fontSize={"12px"} color={"primary.main"}>TÜV SÜD AUTO PARTNER <br /> IN NEUSS</Typography>
-
         </Box>
-        <Box display={'flex'} justifyContent={'space-between'} alignItems={'center'} width={420}>
-          <Box display={'flex'} justifyContent={'space-between'} alignItems={'center'} width={150}>
+        <Box display={'flex'} alignItems={'center'} sx={{justifyContent:{xs:'space-around', md:'space-between'}, pt:{xs: 3, md:0}, width:{xs:350, md:420}}}>
+          <Box display={'flex'} justifyContent={'space-between'} alignItems={'center'} sx={{width:{xs:130, md:150}}}>
             {/* maps */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -48,13 +47,13 @@ const Header = () => {
             </svg>
             <a className='links' href='https://www.google.com/maps/place/Heinrich-Pesch-Stra%C3%9Fe+5a,+50739+K%C3%B6ln,+Alemania/@50.9761526,6.92362,18z/data=!3m1!4b1!4m6!3m5!1s0x47bf2ff516b34efb:0x89a570688681b4ce!8m2!3d50.9761509!4d6.9249075!16s%2Fg%2F11g9qpv7lw?entry=ttu'
               target='blank'>
-              <Typography sx={{ textDecoration: "underline" }} fontSize={"12px"}>Heinrich-Pesch-Str. <br /> 5a 50739 Köln</Typography>
+              <Typography sx={{fontSize:{xs:'11px', md:"12px"}, textDecoration: "underline"}}>Heinrich-Pesch-Str. <br /> 5a 50739 Köln</Typography>
             </a>
           </Box>
           <Box>
             <Typography fontSize={"12px"}>Mon-Fri, 9:00-19:00</Typography>
           </Box>
-          <Box display={'flex'} justifyContent={'space-between'} alignItems={'center'} width={100}>
+          <Box display={'flex'} justifyContent={'space-between'} alignItems={'center'} sx={{width:{xs: 80, md:100}}}>
             <svg   // tiktok
               xmlns="http://www.w3.org/2000/svg"
               width="24"

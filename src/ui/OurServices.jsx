@@ -5,6 +5,7 @@ import classic from "../imgs/classic.png"
 import inspection from "../imgs/inspection.png"
 import accident from "../imgs/accident.png"
 import brands from '../imgs/Carbrands.png'
+import { Link } from 'react-router-dom'
 
 const OurServices = () => {
     return (
@@ -32,8 +33,9 @@ const OurServices = () => {
                         <Typography ml={3} fontSize={14} color={'#808387'}>Special wheels, spoilers, or would it rather be a chassis
                             change? Our test engineers assess and document the
                             changes for you in accordance with the regulations.</Typography>
-                        <Button variant="contained" sx={{ m: 3, width: 140, textTransform: "none", borderRadius: 4, fontSize: 12 }}>Learn more</Button>
-                    </Card>
+                        <Button variant="contained" sx={{ m: 3, width: 140, textTransform: "none", borderRadius: 4, fontSize: 12 }}>
+                            <Link className='links2' to={'/services'}>Learn more</Link>
+                        </Button>                    </Card>
                     <Card sx={{ m: 2, backgroundColor: "secondary.main", width: 420, height: 510, borderRadius: 5 }}>
                         <CardMedia component='img' src={inspection} sx={{ height: 260 }} />
                         <Typography m={3} fontSize={20} fontWeight={600}>Inspection</Typography>
@@ -41,7 +43,9 @@ const OurServices = () => {
                             our competitors from TÜV and Dekra, are authorized to
                             carry out the HU both in our test center and in our
                             bases.</Typography>
-                        <Button variant="contained" sx={{ m: 3, width: 140, textTransform: "none", borderRadius: 4, fontSize: 12 }}>Learn more</Button>
+                        <Button variant="contained" sx={{ m: 3, width: 140, textTransform: "none", borderRadius: 4, fontSize: 12 }}>
+                            <Link className='links2' to={'/services'}>Learn more</Link>
+                        </Button>
                     </Card>
                 </Box>
                 <Box display={'flex'} >
@@ -52,8 +56,9 @@ const OurServices = () => {
                             fault of your own, we offer you to prepare an
                             independent damage report so that you can enforce
                             your right to compensation.</Typography>
-                        <Button variant="contained" sx={{ m: 3, width: 140, textTransform: "none", borderRadius: 4, fontSize: 12 }}>Learn more</Button>
-                    </Card>
+                        <Button variant="contained" sx={{ m: 3, width: 140, textTransform: "none", borderRadius: 4, fontSize: 12 }}>
+                            <Link className='links2' to={'/services'}>Learn more</Link>
+                        </Button>                    </Card>
                     <Card sx={{ m: 2, backgroundColor: "secondary.main", width: 420, height: 510, borderRadius: 5 }}>
                         <CardMedia component='img' src={classic} sx={{ height: 260 }} />
                         <Typography m={3} fontSize={20} fontWeight={600}>Classic car - report</Typography>
@@ -61,13 +66,14 @@ const OurServices = () => {
                             original condition? Our test engineers also carry out
                             classic car inspections in accordance with Section 23
                             StVZO</Typography>
-                        <Button variant="contained" sx={{ m: 3, width: 140, textTransform: "none", borderRadius: 4, fontSize: 12 }}>Learn more</Button>
+                        <Button variant="contained" sx={{ m: 3, width: 140, textTransform: "none", borderRadius: 4, fontSize: 12 }}>
+                            <Link className='links2' to={'/services'}>Learn more</Link>
+                        </Button>
                     </Card>
                 </Box>
             </Box>
             <Box display={'flex'} flexDirection={'column'} alignItems={'center'} justifyContent={'center'} pt={15} pb={15} flexWrap={'wrap'}>
-                <Typography mb={10} color={"primary.main"}>Go to the services page</Typography>
-                <CardMedia component='img' src={brands}  height={312} sx={{width:1108}}/>
+                <CardMedia component='img' src={brands} height={312} sx={{ width: 1108 }} />
             </Box>
         </Grid>
     )

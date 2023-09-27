@@ -2,6 +2,9 @@ import { Box, Button, Grid, Typography } from '@mui/material'
 import React from 'react'
 
 const BookingMenu = () => {
+    const days = new Date()
+    const today = days.toLocaleDateString()
+
     return (
         <Grid mt={-6} display={'flex'} justifyContent={'center'}>
             <Box borderRadius={3} display={'flex'} alignItems={'center'}
@@ -46,7 +49,7 @@ const BookingMenu = () => {
                         </svg>
                         <Box>
                             <Typography fontSize={16} fontWeight={600}>Date</Typography>
-                            <Typography color={"primary.main"} sx={{ textDecoration: "underline" }}>28/9/2023</Typography>
+                            <Typography color={"primary.main"} sx={{ textDecoration: "underline" }}>{today}</Typography>
                         </Box>
                     </Box>
                     <Box display={'flex'} alignItems={'center'}

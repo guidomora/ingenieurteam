@@ -32,8 +32,14 @@ const ContactUs = () => {
                         value={'services'}
                     >
                         <MenuItem value={'Inspections'}>Inspections</MenuItem>
-                        <MenuItem value={'Test'}>Test</MenuItem>
                         <MenuItem value={'Emissions'}>Emissions</MenuItem>
+                        <MenuItem value={'Test'}>Safety systems</MenuItem>
+                        <MenuItem value={'Test'}>Documents</MenuItem>
+                        <MenuItem value={'Test'}>Gas</MenuItem>
+                        <MenuItem value={'Test'}>Liquid</MenuItem>
+                        <MenuItem value={'Test'}>Classic cars</MenuItem>
+                        <MenuItem value={'Test'}>UVV</MenuItem>
+                        <MenuItem value={'Test'}>Used cars</MenuItem>
                     </Select>
                 </Box>
                 <Box display={'flex'} justifyContent={'center'} pt={3}>

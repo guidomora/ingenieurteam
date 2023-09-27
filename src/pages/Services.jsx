@@ -2,6 +2,14 @@ import { Box, Button, Grid, Typography } from '@mui/material'
 import React from 'react'
 import BookingMenu from '../ui/header/subHeaders/BookingMenu'
 import Key from '../ui/svg/Key'
+import Emissions from '../ui/svg/Emissions'
+import Safety from '../ui/svg/Safety'
+import Documents from '../ui/svg/Documents'
+import Gas from '../ui/svg/Gas'
+import Liquid from '../ui/svg/Liquid'
+import Classic from '../ui/svg/Classic'
+import Uvv from '../ui/svg/Uvv'
+import Used from '../ui/svg/Used'
 
 const Services = () => {
     return (
@@ -37,7 +45,7 @@ const Services = () => {
                         borderRadius={5}
                         height={280} width={400}
                         bgcolor={'secondary.main'}>
-                        <Key />
+                        <Emissions />
                         <Typography pt={4} fontWeight={600}>Emissions</Typography>
                         <Typography pb={2} color={'#808387'}>Emissions tests according
                         <br /> to §47a StVZO</Typography>
@@ -51,7 +59,7 @@ const Services = () => {
                         borderRadius={5}
                         height={280} width={400}
                         bgcolor={'secondary.main'}>
-                        <Key />
+                        <Safety />
                         <Typography pt={4} fontWeight={600}>Safety systems</Typography>
                         <Typography pb={2} color={'#808387'}>Safety check truck and <br />
                          KOM according to §29 StVZO</Typography>
@@ -65,7 +73,7 @@ const Services = () => {
                         borderRadius={5}
                         height={280} width={400}
                         bgcolor={'secondary.main'}>
-                        <Key />
+                        <Documents />
                         <Typography pt={4} fontWeight={600}>Documents</Typography>
                         <Typography pb={2} color={'#808387'}>Change approvals according <br />
                          to §19.3 StVZO</Typography>
@@ -79,7 +87,7 @@ const Services = () => {
                         borderRadius={5}
                         height={280} width={400}
                         bgcolor={'secondary.main'}>
-                        <Key />
+                        <Gas />
                         <Typography pt={4} fontWeight={600}>Gas</Typography>
                         <Typography pb={2} color={'#808387'}>Gas system tests according <br />
                          to §41a StVZO</Typography>
@@ -93,7 +101,7 @@ const Services = () => {
                         borderRadius={5}
                         height={280} width={400}
                         bgcolor={'secondary.main'}>
-                        <Key />
+                        <Liquid />
                         <Typography pt={4} fontWeight={600}>Liquid</Typography>
                         <Typography pb={2} color={'#808387'}>Testing of liquid gas systems in vehicles <br />
                          in accordance with DVGW G607</Typography>
@@ -107,7 +115,7 @@ const Services = () => {
                         borderRadius={5}
                         height={280} width={400}
                         bgcolor={'secondary.main'}>
-                        <Key />
+                        <Classic />
                         <Typography pt={4} fontWeight={600}>Classic cars</Typography>
                         <Typography pb={2} color={'#808387'}>Expert opinion for classic car classification <br />
                          according to §23 StVZO (H license plate)</Typography>
@@ -121,7 +129,7 @@ const Services = () => {
                         borderRadius={5}
                         height={280} width={400}
                         bgcolor={'secondary.main'}>
-                        <Key />
+                        <Uvv />
                         <Typography pt={4} fontWeight={600}>UVV</Typography>
                         <Typography pb={2} color={'#808387'}>UVV tests according <br /> to GUV-V D29</Typography>
                     </Box>
@@ -130,14 +138,14 @@ const Services = () => {
                         mb={4}
                         display={'flex'}
                         flexDirection={'column'}
-                        justifyContent={'space-between'}
+                        justifyContent={'center'}
                         p={5}
                         borderRadius={5}
                         height={280} width={400}
                         bgcolor={'secondary.main'}>
-                        <Key />
-                        <Typography pt={4} fontWeight={600}>Used cars</Typography>
-                        <Typography pb={2} color={'#808387'}>User car check</Typography>
+                        <Used />
+                        <Typography pt={3} pb={2} fontWeight={600}>Used cars</Typography>
+                        <Typography pb={6} color={'#808387'}>User car check</Typography>
                     </Box>
                 </Box>
             </Box>
