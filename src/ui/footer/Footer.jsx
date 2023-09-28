@@ -6,9 +6,10 @@ export const Footer = () => {
   return (
     <Grid sx={{ backgroundColor: '#1E242D', borderTopLeftRadius: 12, borderTopRightRadius: 12 }} height={430}>
       <Box pt={8} pl={7} pr={7} display={'flex'} height={300}
-        justifyContent={'space-between'} flexWrap={'wrap'}>
+        flexWrap={'wrap'}
+        sx={{ justifyContent: { xs: 'center', md: 'space-between' } }}>
         <Box display={'flex'}
-          justifyContent={'space-between'} flexDirection={'column'}>
+          sx={{ justifyContent: { xs: 'space-evenly', md: 'space-between' } }} flexDirection={'column'}>
           <Box>
             <img className='img' src={logo} alt="" />
             <svg
@@ -25,7 +26,7 @@ export const Footer = () => {
             </svg>
           </Box>
           <Typography color={'grey'}>TÜV SÜD AUTO PARTNER<br /> IN NEUSS</Typography>
-          <Button variant="contained" sx={{ textTransform: "none", borderRadius: 4, fontSize: 12 }}>Book an Appointment</Button>
+          <Button variant="contained" sx={{ display: { xs: 'none', md: 'unset' }, textTransform: "none", borderRadius: 4, fontSize: 12 }}>Book an Appointment</Button>
         </Box>
         <Box display={'flex'} flexDirection={'column'} justifyContent={'space-between'}>
           <Box display={'flex'}>
@@ -43,9 +44,9 @@ export const Footer = () => {
                 clipRule="evenodd"
               ></path>
             </svg>
-            <Link sx={{textDecoration:'none'}} href='https://www.google.com/maps/place/Heinrich-Pesch-Stra%C3%9Fe+5a,+50739+K%C3%B6ln,+Alemania/@50.9761526,6.92362,18z/data=!3m1!4b1!4m6!3m5!1s0x47bf2ff516b34efb:0x89a570688681b4ce!8m2!3d50.9761509!4d6.9249075!16s%2Fg%2F11g9qpv7lw?entry=ttu'
+            <Link sx={{ textDecoration: 'none' }} href='https://www.google.com/maps/place/Heinrich-Pesch-Stra%C3%9Fe+5a,+50739+K%C3%B6ln,+Alemania/@50.9761526,6.92362,18z/data=!3m1!4b1!4m6!3m5!1s0x47bf2ff516b34efb:0x89a570688681b4ce!8m2!3d50.9761509!4d6.9249075!16s%2Fg%2F11g9qpv7lw?entry=ttu'
               target='blank'>
-              <Typography ml={5} color={'white'} fontSize={20}>Heinrich-Pesch-Str.<br /> 5a 50739 Kölna</Typography>
+              <Typography color={'white'} sx={{ ml: { xs: 2, md: 5 }, fontSize: { xs: 16, md: 20 } }} >Heinrich-Pesch-Str.<br /> 5a 50739 Kölna</Typography>
             </Link>
           </Box>
           <Box display={'flex'}>
@@ -63,7 +64,7 @@ export const Footer = () => {
                 clipRule="evenodd"
               ></path>
             </svg>
-            <Typography ml={5} color={'white'} fontSize={20}>+49 221 57 000 807</Typography>
+            <Typography ml={5} color={'white'} sx={{ ml: { xs: 2, md: 5 }, fontSize: { xs: 16, md: 20 } }}>+49 221 57 000 807</Typography>
           </Box>
           <Box display={'flex'}>
             <svg
@@ -80,7 +81,7 @@ export const Footer = () => {
                 clipRule="evenodd"
               ></path>
             </svg>
-            <Typography ml={5} color={'white'} fontSize={20}>Mon-Fir, 9:00-19:00</Typography>
+            <Typography ml={5} color={'white'} sx={{ ml: { xs: 2, md: 5 }, fontSize: { xs: 16, md: 20 } }}>Mon-Fir, 9:00-19:00</Typography>
           </Box>
         </Box>
       </Box>
@@ -96,7 +97,7 @@ export const Footer = () => {
         </svg>
       </Box>
       <Box display={'flex'} justifyContent={'space-between'} pt={4} pl={7} pr={7}>
-        <Typography color={'grey'}>© ST-Ingenieurteam 2023</Typography>
+        <Typography color={'grey'} sx={{ fontSize: { xs: 12, md: 16 } }}>© ST-Ingenieurteam 2023</Typography>
         <Box width={170} display={'flex'} justifyContent={'space-evenly'}>
           <svg     // fb
             xmlns="http://www.w3.org/2000/svg"

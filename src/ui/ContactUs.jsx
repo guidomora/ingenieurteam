@@ -8,24 +8,24 @@ const ContactUs = () => {
         setServices(event.target.value)
     }
     return (
-        <Grid>
+        <Grid sx={{display:{xs:'flex', md:'unset'}, alignItems:{xs:'center', md:'unset'}, flexDirection:{xs:'column', md:'unset'}}}>
             <Box pt={5} pb={5} textAlign={'center'}>
-                <Typography fontWeight={600} fontSize={64}>Contact us</Typography>
+                <Typography sx={{fontSize:{xs:55, md:64}}} fontWeight={600}>Contact us</Typography>
             </Box>
-            <Box display={'flex'} flexDirection={'column'} alignContent={'center'}
+            <Box display={'flex'} flexDirection={'column'} alignItems={'center'}
                 flexWrap={'wrap'} pt={3}>
                 <Box>
                     <Typography pb={1} color={'black'}>First name</Typography>
-                    <TextField className='border' sx={{ backgroundColor: 'secondary.main', width: 500 }} label='First name' />
+                    <TextField className='border' sx={{ backgroundColor: 'secondary.main', width:{xs:300, md:500}}} label='First name' />
                 </Box>
                 <Box pt={3}>
                     <Typography pb={1} color={'black'}>Last name</Typography>
-                    <TextField className='border' sx={{ backgroundColor: 'secondary.main', width: 500 }} label='Last name' />
+                    <TextField className='border' sx={{ backgroundColor: 'secondary.main', width:{xs:300, md:500}}} label='Last name' />
                 </Box>
                 <Box pt={3}>
                     <Typography pb={1} color={'black'}>Choose service</Typography>
                     <Select
-                        sx={{ width: 500, pb:1 }}
+                        sx={{ width:{xs:300, md:500}, pb:1 }}
                         labelId="demo-simple-select-label"
                         id="demo-simple-select"
                         onChange={handleChange}
@@ -46,7 +46,7 @@ const ContactUs = () => {
                     <Button variant='contained' fullWidth sx={{ height: 50, textTransform: 'none', borderRadius: 2 }}>
                         Send message</Button>
                 </Box>
-                <Box pb={5} display={'flex'} justifyContent={'center'} pt={3} flexWrap={'wrap'} width={500}>
+                <Box pb={5} display={'flex'} justifyContent={'center'} pt={3} flexWrap={'wrap'} sx={{ width:{xs:300, md:500}, textAlign:{xs:'center', md:'unset'}}}>
                     <Typography fontSize={12}>If you have a technical question, please always provide us with your contact details - even if you
                         are already our customer. In order to quickly forward your request to the right place, as well as
                         for any questions, it is very helpful for us to provide us with your place of residence and your
@@ -54,7 +54,7 @@ const ContactUs = () => {
                     </Typography>
                 </Box>
             </Box>
-            <Box pt={10} pb={5} display={'flex'} justifyContent={'center'}>
+            <Box sx={{pt:{xs:5, md:10}}} pb={5} display={'flex'} justifyContent={'center'}>
                 <Link target='_blank' href='https://www.google.com/maps/place/Heinrich-Pesch-Stra%C3%9Fe+5a,+50739+K%C3%B6ln,+Alemania/@50.9761526,6.92362,18z/data=!3m1!4b1!4m6!3m5!1s0x47bf2ff516b34efb:0x89a570688681b4ce!8m2!3d50.9761509!4d6.9249075!16s%2Fg%2F11g9qpv7lw?entry=ttu'>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
