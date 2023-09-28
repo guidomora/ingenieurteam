@@ -1,14 +1,13 @@
 import React from 'react'
 import logo from '../../imgs/ST.png'
 import { Box, Button, Grid, Typography } from '@mui/material'
-import { Link, NavLink } from 'react-router-dom'
-import { Link as UiLink } from '@mui/material'
+import { NavLink } from 'react-router-dom'
 
 const Header = () => {
   return (
     <>
 
-      <Grid display={'flex'} justifyContent={'space-between'} alignItems={'center'} sx={{pl:{xs:3, md:15}, pr:{xs:3, md:15}, flexDirection:{xs:'column', md:'row'}}}  pt={3} pb={3} bgcolor={"secondary.main"}>
+      <Grid display={'flex'} justifyContent={'space-between'} alignItems={'center'} sx={{pl:{xs:0, md:15}, pr:{xs:0, md:15}, flexDirection:{xs:'column', md:'row'}}}  pt={3} pb={3} bgcolor={"secondary.main"}>
         <Box display={'flex'} sx={{flexDirection:{xs: 'column', md:'row'}, width:{xs:200, md:370}}} justifyContent={'space-between'} alignItems={'center'} >
           <Box display={'flex'} alignItems={'center'}>
             <img className='img' src={logo} alt="" />

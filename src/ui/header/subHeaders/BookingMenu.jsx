@@ -6,12 +6,14 @@ const BookingMenu = () => {
     const today = days.toLocaleDateString()
 
     return (
-        <Grid mt={-6} display={'flex'} justifyContent={'center'}>
-            <Box borderRadius={3} display={'flex'} alignItems={'center'}
-                justifyContent={'space-between'} bgcolor={"white"} border={'solid 1px #eef0f0'}
+        <Grid mt={-6} justifyContent={'center'} sx={{display:{xs:'none', md:'flex'}}}>
+            <Box sx={{ flexDirection:{xs:'column', md:'row'}, justifyContent: { xs: 'space-evenly', md: 'space-between' } }}
+                borderRadius={3} display={'flex'} alignItems={'center'}
+                bgcolor={"white"} border={'solid 1px #eef0f0'}
                 height={90} width={"70vw"} >
                 <Box display={'flex'} alignItems={'center'}
-                    justifyContent={'space-evenly'} width={700}>
+                sx={{flexDirection:{xs:'column', md:'row'},
+                 justifyContent: { xs: 'center', md: 'space-evenly' }, width:{xs:200, md:700}}}>
                     <Box display={'flex'} alignItems={'center'}
                         justifyContent={'space-evenly'} width={160}>
                         <svg
@@ -29,8 +31,8 @@ const BookingMenu = () => {
                             ></path>
                         </svg>
                         <Box>
-                            <Typography fontSize={16} fontWeight={600}>Location</Typography>
-                            <Typography color={"primary.main"} sx={{ textDecoration: "underline" }}>Cologne</Typography>
+                            <Typography sx={{ fontSize: { xs: 14, md: 16 } }} fontWeight={600}>Location</Typography>
+                            <Typography color={"primary.main"} sx={{ textDecoration: "underline", fontSize: { xs: 14, md: 16 } }}>Cologne</Typography>
                         </Box>
                     </Box>
                     <Box display={'flex'} alignItems={'center'}
@@ -48,8 +50,8 @@ const BookingMenu = () => {
                             ></path>
                         </svg>
                         <Box>
-                            <Typography fontSize={16} fontWeight={600}>Date</Typography>
-                            <Typography color={"primary.main"} sx={{ textDecoration: "underline" }}>{today}</Typography>
+                            <Typography sx={{ fontSize: { xs: 14, md: 16 } }} fontWeight={600}>Date</Typography>
+                            <Typography color={"primary.main"} sx={{ textDecoration: "underline", fontSize: { xs: 14, md: 16 } }}>{today}</Typography>
                         </Box>
                     </Box>
                     <Box display={'flex'} alignItems={'center'}
@@ -69,8 +71,8 @@ const BookingMenu = () => {
                             ></path>
                         </svg>
                         <Box>
-                            <Typography fontSize={16} fontWeight={600}>Select a service</Typography>
-                            <Typography color={"primary.main"} sx={{ textDecoration: "underline" }}>Emissions</Typography>
+                            <Typography sx={{ fontSize: { xs: 14, md: 16 } }} fontWeight={600}>Select a service</Typography>
+                            <Typography color={"primary.main"} sx={{ textDecoration: "underline", fontSize: { xs: 14, md: 16 } }}>Emissions</Typography>
                         </Box>
                     </Box>
                 </Box>

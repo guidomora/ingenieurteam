@@ -12,6 +12,7 @@ const OurServices = () => {
         <Grid>
             <Box mb={10} display={'flex'} justifyContent={'center'} pt={15}>
                 <svg
+                    className='ourservices'
                     xmlns="http://www.w3.org/2000/svg"
                     width="398"
                     height="52"
@@ -26,8 +27,8 @@ const OurServices = () => {
             </Box>
             <Box display={'flex'} flexDirection={"column"}
                 flexWrap={'wrap'} alignContent={'center'} justifyContent={'center'}>
-                <Box display={'flex'}>
-                    <Card sx={{ m: 2, backgroundColor: "secondary.main", width: 420, height: 510, borderRadius: 5 }}>
+                <Box display={'flex'} sx={{flexDirection:{xs:'column', md:'row'}, alignItems:{xs:'center', md:'unset'}}}>
+                    <Card sx={{ m: 2, backgroundColor: "secondary.main", width: {xs:300, md:420}, height: 510, borderRadius: 5 }}>
                         <CardMedia component='img' src={change} sx={{ height: 260 }} />
                         <Typography m={3} fontSize={20} fontWeight={600}>Change acceptances</Typography>
                         <Typography ml={3} fontSize={14} color={'#808387'}>Special wheels, spoilers, or would it rather be a chassis
@@ -36,7 +37,7 @@ const OurServices = () => {
                         <Button variant="contained" sx={{ m: 3, width: 140, textTransform: "none", borderRadius: 4, fontSize: 12 }}>
                             <Link className='links2' to={'/services'}>Learn more</Link>
                         </Button>                    </Card>
-                    <Card sx={{ m: 2, backgroundColor: "secondary.main", width: 420, height: 510, borderRadius: 5 }}>
+                    <Card sx={{ m: 2, backgroundColor: "secondary.main", width: {xs:300, md:420}, height: 510, borderRadius: 5 }}>
                         <CardMedia component='img' src={inspection} sx={{ height: 260 }} />
                         <Typography m={3} fontSize={20} fontWeight={600}>Inspection</Typography>
                         <Typography ml={3} fontSize={14} color={'#808387'}>Is your general inspection due? Our test engineers, like
@@ -48,8 +49,8 @@ const OurServices = () => {
                         </Button>
                     </Card>
                 </Box>
-                <Box display={'flex'} >
-                    <Card sx={{ m: 2, backgroundColor: "secondary.main", width: 420, height: 510, borderRadius: 5 }}>
+                <Box display={'flex'} sx={{flexDirection:{xs:'column', md:'row'}, alignItems:{xs:'center', md:'unset'}}}>
+                    <Card sx={{ m: 2, backgroundColor: "secondary.main", width: {xs:300, md:420}, height:{xs:560, md:510}, borderRadius: 5 }}>
                         <CardMedia component='img' src={accident} sx={{ height: 260 }} />
                         <Typography m={3} fontSize={20} fontWeight={600}>Accident and valuation reports</Typography>
                         <Typography ml={3} fontSize={14} color={'#808387'}>If you have been involved in an accident through no
@@ -59,7 +60,7 @@ const OurServices = () => {
                         <Button variant="contained" sx={{ m: 3, width: 140, textTransform: "none", borderRadius: 4, fontSize: 12 }}>
                             <Link className='links2' to={'/services'}>Learn more</Link>
                         </Button>                    </Card>
-                    <Card sx={{ m: 2, backgroundColor: "secondary.main", width: 420, height: 510, borderRadius: 5 }}>
+                    <Card sx={{ m: 2, backgroundColor: "secondary.main", width: {xs:300, md:420}, height: 510, borderRadius: 5 }}>
                         <CardMedia component='img' src={classic} sx={{ height: 260 }} />
                         <Typography m={3} fontSize={20} fontWeight={600}>Classic car - report</Typography>
                         <Typography ml={3} fontSize={14} color={'#808387'}>Is your vehicle older than 30 years and largely in its
@@ -72,8 +73,8 @@ const OurServices = () => {
                     </Card>
                 </Box>
             </Box>
-            <Box display={'flex'} flexDirection={'column'} alignItems={'center'} justifyContent={'center'} pt={15} pb={15} flexWrap={'wrap'}>
-                <CardMedia component='img' src={brands} height={312} sx={{ width: 1108 }} />
+            <Box sx={{display:{xs:'none', md:'flex'}}} flexDirection={'column'} alignItems={'center'} justifyContent={'center'} pt={15} pb={15} flexWrap={'wrap'}>
+                <CardMedia component='img' src={brands} height={312} sx={{ width: {xs:320, md:1108} }} />
             </Box>
         </Grid>
     )

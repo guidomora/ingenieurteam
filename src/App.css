@@ -94,11 +94,23 @@
 
 @media only screen and (max-width: 767px) {
   .engineer {
-    height: 270px;
-    width: 270px;
+    margin-top: -80px;
+    height: 240px;
+    width: 240px;
+  }
+
+  .maps {
+    margin-top: -20px;
+    height: 140px;
+    width: 140px;
   }
 
   .car {
     display: none;
+  }
+
+  .ourservices{
+    height: 100px;
+    width: 300px;
   }
 }
