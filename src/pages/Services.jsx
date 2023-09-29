@@ -1,6 +1,5 @@
-import { Box, Button, Grid, Typography } from '@mui/material'
+import { Box, Grid, Typography } from '@mui/material'
 import React from 'react'
-import BookingMenu from '../ui/header/subHeaders/BookingMenu'
 import Key from '../ui/svg/Key'
 import Emissions from '../ui/svg/Emissions'
 import Safety from '../ui/svg/Safety'
@@ -15,17 +14,14 @@ const Services = () => {
     return (
         <Grid>
             <Box bgcolor={'secondary.main'}>
-                <Typography pt={10} textAlign={'center'} sx={{fontSize:{xs:50, md:64}, pb:{xs:5, md:0}}}
+                <Typography pt={10} fontWeight={600} textAlign={'center'} sx={{fontSize:{xs:50, md:64}, pb:{xs:5, md:10}}}
                     color={'primary.main'}>Our services</Typography>
-                <Box sx={{display:{xs:'none', md:'unset'}}} pt={20} pb={10}>
-                    <BookingMenu />
-                </Box>
             </Box>
             <Box display={'flex'} justifyContent={'center'}>
                 <Box pt={8} display={'flex'} flexWrap={'wrap'}
                     justifyContent={'space-around'} alignItems={'center'} width={900}>
                     <Box
-                        sx={{ height: 280, width: { xs: 300, md: 400 } }}
+                        sx={{ height: 280, width: { xs: 300, md: 400 }, mt:{xs:4, md:0} }}
                         display={'flex'}
                         flexDirection={'column'}
                         justifyContent={'space-between'}

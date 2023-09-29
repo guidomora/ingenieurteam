@@ -46,21 +46,26 @@ const About = () => {
           From routine maintenance to complex repairs, we have the knowledge, experience, and state-of-the-art equipment to keep your vehicle running smoothly.
         </Typography>
       </Box>
-      <Box>
-        <Box display={'flex'} justifyContent={'space-evenly'}>
-          {imgs.map((imagenes, idx) =>
-            <CardMedia key={idx} src={`${imagenes}`} component='img' height={270} sx={{ width: 270 }} />
-          )}
+      <Box sx={{display:'flex', flexWrap:'wrap', justifyContent:{xs:'center', md:'space-evenly'}, pb:{xs:2, md:10}}}>
+        <Box>
+          <CardMedia src={frame1} component='img' height={270} sx={{ width: 270 }} />
+          <Typography pt={2}  fontWeight={600} sx={{ width: 270 }}>Alex</Typography>
+          <Typography pt={2} color={'primary.main'} sx={{ width: 270 }}>Master straightener</Typography>
         </Box>
-        <Box display={'flex'} justifyContent={'space-evenly'} pt={2}>
-          {names.map((name, idx) =>
-            <Typography key={idx} fontWeight={600} sx={{ width: 270 }}>{`${name}`}</Typography>
-          )}
+        <Box sx={{pb:{xs:3, md:0}, ml:{sm:3, md:0}}}>
+          <CardMedia src={frame2} component='img' height={270} sx={{ width: 270 }} />
+          <Typography pt={2}  fontWeight={600} sx={{ width: 270 }}>Alex</Typography>
+          <Typography pt={2} color={'primary.main'} sx={{ width: 270 }}>Chief engineer</Typography>
         </Box>
-        <Box display={'flex'} justifyContent={'space-evenly'} pt={2} pb={40}>
-          {jobs.map((job, idx) =>
-            <Typography key={idx} color={'primary.main'} sx={{ width: 270 }}>{`${job}`}</Typography>
-          )}
+        <Box sx={{pb:{xs:3, md:0}}}>
+          <CardMedia src={frame3} component='img' height={270} sx={{ width: 270 }} />
+          <Typography pt={2}  fontWeight={600} sx={{ width: 270 }}>Alex</Typography>
+          <Typography pt={2} color={'primary.main'} sx={{ width: 270 }}>Chief engineer</Typography>
+        </Box>
+        <Box sx={{pb:{xs:3, md:0}, ml:{sm:3, md:0}}}>
+          <CardMedia src={frame4} component='img' height={270} sx={{ width: 270 }} />
+          <Typography pt={2}  fontWeight={600} sx={{ width: 270 }}>Alex</Typography>
+          <Typography pt={2} color={'primary.main'} sx={{ width: 270 }}>Master straightener</Typography>
         </Box>
       </Box>
     </Grid>
