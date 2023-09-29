@@ -1,8 +1,11 @@
 import { Box, Button, Grid, Link, Typography } from '@mui/material'
 import React from 'react'
 import logo from '../../imgs/ST.png'
+import { scrollToSection, scrollToSection2, scrollToSectionDown } from '../../helpers/scroll'
+import { useLocation } from 'react-router-dom'
 
 export const Footer = () => {
+  const location = useLocation()
   return (
     <Grid sx={{ backgroundColor: '#1E242D', borderTopLeftRadius: 12, borderTopRightRadius: 12 }} height={430}>
       <Box pt={8} pl={7} pr={7} display={'flex'} height={300}
@@ -26,7 +29,6 @@ export const Footer = () => {
             </svg>
           </Box>
           <Typography color={'grey'}>TÜV SÜD AUTO PARTNER<br /> IN NEUSS</Typography>
-          <Button variant="contained" sx={{ display: { xs: 'none', md: 'unset' }, textTransform: "none", borderRadius: 4, fontSize: 12 }}>Book an Appointment</Button>
         </Box>
         <Box display={'flex'} flexDirection={'column'} justifyContent={'space-between'}>
           <Box display={'flex'}>

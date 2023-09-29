@@ -8,7 +8,7 @@ const ContactUs = () => {
         setServices(event.target.value)
     }
     return (
-        <Grid sx={{display:{xs:'flex', md:'unset'}, alignItems:{xs:'center', md:'unset'}, flexDirection:{xs:'column', md:'unset'}}}>
+        <Grid id='contact' sx={{display:{xs:'flex', md:'unset'}, alignItems:{xs:'center', md:'unset'}, flexDirection:{xs:'column', md:'unset'}}}>
             <Box pt={5} pb={5} textAlign={'center'}>
                 <Typography sx={{fontSize:{xs:55, md:64}}} fontWeight={600}>Contact us</Typography>
             </Box>

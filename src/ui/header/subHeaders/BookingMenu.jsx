@@ -1,6 +1,7 @@
 import { Box, Button, Grid, Typography } from '@mui/material'
 import React from 'react'
 
+
 const BookingMenu = () => {
     const days = new Date()
     const today = days.toLocaleDateString()
@@ -77,7 +78,7 @@ const BookingMenu = () => {
                     </Box>
                 </Box>
                 <Box pr={10}>
-                    <Button variant="contained" sx={{ width: 200, textTransform: "none", borderRadius: 4, fontSize: 12 }}>Book an Appointment</Button>
+                    <Button  variant="contained" sx={{ width: 200, textTransform: "none", borderRadius: 4, fontSize: 12 }}>Book an Appointment</Button>
                 </Box>
             </Box>
         </Grid>

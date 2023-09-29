@@ -1,14 +1,19 @@
 import React from 'react'
 import logo from '../../imgs/ST.png'
 import { Box, Button, Grid, Typography } from '@mui/material'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
+import { scrollToSection, scrollToSection2 } from '../../helpers/scroll'
+
+
 
 const Header = () => {
+  const location = useLocation()
+
+
   return (
     <>
-
-      <Grid display={'flex'} justifyContent={'space-between'} alignItems={'center'} sx={{pl:{xs:0, md:15}, pr:{xs:0, md:15}, flexDirection:{xs:'column', md:'row'}}}  pt={3} pb={3} bgcolor={"secondary.main"}>
-        <Box display={'flex'} sx={{flexDirection:{xs: 'column', md:'row'}, width:{xs:200, md:370}}} justifyContent={'space-between'} alignItems={'center'} >
+      <Grid display={'flex'} justifyContent={'space-between'} alignItems={'center'} sx={{ pl: { xs: 0, md: 15 }, pr: { xs: 0, md: 15 }, flexDirection: { xs: 'column', md: 'row' } }} pt={3} pb={3} bgcolor={"secondary.main"}>
+        <Box display={'flex'} sx={{ flexDirection: { xs: 'column', md: 'row' }, width: { xs: 200, md: 370 } }} justifyContent={'space-between'} alignItems={'center'} >
           <Box display={'flex'} alignItems={'center'}>
             <img className='img' src={logo} alt="" />
             <svg
@@ -27,8 +32,8 @@ const Header = () => {
           </Box>
           <Typography fontSize={"12px"} color={"primary.main"}>TÜV SÜD AUTO PARTNER <br /> IN NEUSS</Typography>
         </Box>
-        <Box display={'flex'} alignItems={'center'} sx={{justifyContent:{xs:'space-evenly', md:'space-between'}, pt:{xs: 3, md:0}, width:{xs:350, md:420}}}>
-          <Box display={'flex'} justifyContent={'space-between'} alignItems={'center'} sx={{width:{xs:130, md:150}}}>
+        <Box display={'flex'} alignItems={'center'} sx={{ justifyContent: { xs: 'space-evenly', md: 'space-between' }, pt: { xs: 3, md: 0 }, width: { xs: 350, md: 420 } }}>
+          <Box display={'flex'} justifyContent={'space-between'} alignItems={'center'} sx={{ width: { xs: 130, md: 150 } }}>
             {/* maps */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -46,13 +51,13 @@ const Header = () => {
             </svg>
             <a className='links' href='https://www.google.com/maps/place/Heinrich-Pesch-Stra%C3%9Fe+5a,+50739+K%C3%B6ln,+Alemania/@50.9761526,6.92362,18z/data=!3m1!4b1!4m6!3m5!1s0x47bf2ff516b34efb:0x89a570688681b4ce!8m2!3d50.9761509!4d6.9249075!16s%2Fg%2F11g9qpv7lw?entry=ttu'
               target='blank'>
-              <Typography sx={{fontSize:{xs:'11px', md:"12px"}, textDecoration: "underline"}}>Heinrich-Pesch-Str. <br /> 5a 50739 Köln</Typography>
+              <Typography sx={{ fontSize: { xs: '11px', md: "12px" }, textDecoration: "underline" }}>Heinrich-Pesch-Str. <br /> 5a 50739 Köln</Typography>
             </a>
           </Box>
           <Box>
             <Typography fontSize={"11px"}>Mon-Fri, 9:00-19:00</Typography>
           </Box>
-          <Box display={'flex'} justifyContent={'space-between'} alignItems={'center'} sx={{width:{xs: 75, md:100}}}>
+          <Box display={'flex'} justifyContent={'space-between'} alignItems={'center'} sx={{ width: { xs: 75, md: 100 } }}>
             <svg   // tiktok
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -123,24 +128,30 @@ const Header = () => {
           </Box>
         </Box>
       </Grid>
-      <Grid 
-      sx={{pl:{xs:0, md:15}, pr:{xs:0, md:15}, justifyContent:{xs:'center', md:'space-between'}, alignItems:{xs:'center', md:'normal'}, flexDirection:{xs:'column', md:'row'}}} 
-      pt={3} pb={3} bgcolor={"secondary.main"} display={'flex'}>
+      <Grid
+        sx={{ pl: { xs: 0, md: 15 }, pr: { xs: 0, md: 15 }, justifyContent: { xs: 'center', md: 'space-between' }, alignItems: { xs: 'center', md: 'normal' }, flexDirection: { xs: 'column', md: 'row' } }}
+        pt={3} pb={3} bgcolor={"secondary.main"} display={'flex'}>
         <Box display={'flex'} justifyContent={'space-evenly'} alignItems={'center'} width={370}>
           <NavLink to={'/'} className={({ isActive }) => `nav-item nav-link ${isActive ? "onactive" : 'links'}`}>
-            <Typography className='hvr-underline-from-center' fontWeight={600} sx={{fontSize:{xs:12, md:14}}}>Homepage</Typography>
+            <Typography className='hvr-underline-from-center' fontWeight={600} sx={{ fontSize: { xs: 12, md: 14 } }}>Homepage</Typography>
           </NavLink>
           <NavLink to={'/about'} className={({ isActive }) => `nav-item nav-link ${isActive ? "onactive" : 'links'}`}>
-            <Typography className='hvr-underline-from-center' fontWeight={600} sx={{fontSize:{xs:12, md:14}}}>About</Typography>
+            <Typography className='hvr-underline-from-center' fontWeight={600} sx={{ fontSize: { xs: 12, md: 14 } }}>About</Typography>
           </NavLink>
           <NavLink to={'/services'} className={({ isActive }) => `nav-item nav-link ${isActive ? "onactive" : 'links'}`}>
-            <Typography className='hvr-underline-from-center' fontWeight={600} sx={{fontSize:{xs:12, md:14}}}>Services</Typography>
+            <Typography className='hvr-underline-from-center' fontWeight={600} sx={{ fontSize: { xs: 12, md: 14 } }}>Services</Typography>
           </NavLink>
         </Box>
-        <Box display={'flex'} sx={{pt:{xs:2, md:0}, width:{xs: 360, md:430}, justifyContent:{xs:'space-evenly', md:'space-between'}}} alignItems={'center'}>
-          <Typography color={"primary.main"} fontWeight={600} sx={{fontSize:{xs:11, md:14}}}>+49 221 57 000 807</Typography>
-          <Button variant="outlined" sx={{ textTransform: "none", borderRadius: 4, fontSize:{xs:10, md:12} }} >Call Back</Button>
-          <Button variant="contained" sx={{ textTransform: "none", borderRadius: 4, fontSize:{xs:10, md:12}}}>Book an Appointment</Button>
+        <Box display={'flex'} sx={{ pt: { xs: 2, md: 0 }, width: { xs: 360, md: 430 }, justifyContent: { xs: 'space-evenly', md: 'space-between' } }} alignItems={'center'}>
+          <Typography color={"primary.main"} fontWeight={600} sx={{ fontSize: { xs: 11, md: 14 } }}>+49 221 57 000 807</Typography>
+          <Button variant="outlined" sx={{ textTransform: "none", borderRadius: 4, fontSize: { xs: 10, md: 12 } }} >Call Back</Button>
+          {location.pathname !== '/' ? <Button variant="contained" sx={{ textTransform: "none", borderRadius: 4, fontSize: { xs: 10, md: 12 } }}>
+            <Link to='/#contact' className='links2' onClick={scrollToSection2}>
+              Book an Appointment
+            </Link>
+          </Button>
+            : <Button onClick={scrollToSection} variant="contained" sx={{ textTransform: "none", borderRadius: 4, fontSize: { xs: 10, md: 12 } }}>Book an Appointment</Button>
+          }
         </Box>
       </Grid>
     </>
