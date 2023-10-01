@@ -2,10 +2,10 @@ import React from 'react'
 import Header from '../ui/header/Header'
 import { Footer } from '../ui/footer/Footer'
 
+
 const Layout = ({ children }) => {
     return (
         <>
-            <title>Ingenieur Team</title>
             <header>
                 <Header />
             </header>
@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
                 {children}
             </main>
             <footer >
-                <Footer/>
+                <Footer />
             </footer>
         </>
     )
