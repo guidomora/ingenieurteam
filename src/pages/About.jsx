@@ -54,17 +54,17 @@ const About = () => {
         </Box>
         <Box sx={{pb:{xs:3, md:0}, ml:{sm:3, md:0}}}>
           <CardMedia src={frame2} component='img' height={270} sx={{ width: 270 }} />
-          <Typography pt={2}  fontWeight={600} sx={{ width: 270 }}>Alex</Typography>
+          <Typography pt={2}  fontWeight={600} sx={{ width: 270 }}>Kevin</Typography>
           <Typography pt={2} color={'primary.main'} sx={{ width: 270 }}>Chief engineer</Typography>
         </Box>
         <Box sx={{pb:{xs:3, md:0}}}>
           <CardMedia src={frame3} component='img' height={270} sx={{ width: 270 }} />
-          <Typography pt={2}  fontWeight={600} sx={{ width: 270 }}>Alex</Typography>
+          <Typography pt={2}  fontWeight={600} sx={{ width: 270 }}>Max</Typography>
           <Typography pt={2} color={'primary.main'} sx={{ width: 270 }}>Chief engineer</Typography>
         </Box>
         <Box sx={{pb:{xs:3, md:0}, ml:{sm:3, md:0}}}>
           <CardMedia src={frame4} component='img' height={270} sx={{ width: 270 }} />
-          <Typography pt={2}  fontWeight={600} sx={{ width: 270 }}>Alex</Typography>
+          <Typography pt={2}  fontWeight={600} sx={{ width: 270 }}>Mat</Typography>
           <Typography pt={2} color={'primary.main'} sx={{ width: 270 }}>Master straightener</Typography>
         </Box>
       </Box>
